@@ -13,20 +13,135 @@
 
 <body>
 
-    <header class="bg-black text-center py-48">
-        <h1 class="text-orange-400 text-7xl italic ">Select Your Best Five</h1>
+    <header class="bg-slate-400 text-center py-48 mb-8">
+        <h1 class="text-indigo-700 text-7xl italic ">Find the best cricket player</h1>
         <p class="text-white text-sm mt-7 px-96">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint.
-            Velit
-            officia
-            consequat duis enim
-            velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
 
     </header>
 
+    <!--  -->
+
+    <div class="w-9/12 mx-auto grid grid-cols-4 gap-0 mb-8">
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/shakib.jpeg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Shakib</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/rubbel.jpg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Rubbel</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/sabbir_280x180.jpg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Sabbir</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
 
 
 
+
+        <div class="border-4 bg-slate-400">
+            <p class="text-center my-4 text-white text-2xl">Selected - V</p>
+
+
+            <div class="overflow-x-auto">
+                <table>
+                    <!-- head -->
+                    <!-- <thead>
+                        <tr>
+                            <th></th>
+                            <th>Player Num</th>
+                            <th>Player Name</th>
+                        </tr>
+                    </thead> -->
+                    <tbody id="products-cart">
+                        <!-- <tr>
+                        <th>1</th>
+                        <td>Cy Ganderton</td>
+                        <td>Quality Control Specialist</td>
+                      </tr> -->
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/Tamim.jpg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Tamim-Iqbal</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/Mahmudullah_280x180.png" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Mahmudullah-Riyad</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/Mustafizur-Rahman_1_280x180.jpg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Mustafizur-Rahman</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+
+
+        <div class="border-4 bg-slate-400 grid-rows-2 row-span-3 ">
+            <h1 class="text-center my-4 text-white text-2xl">Budget</h1>
+
+            <h1 class="inline text-lg ml-6">Per Player</h1>
+            <input class="w-36 py-2" type="number">
+
+            <button class=" btn-primary px-20 py-4 ml-4 my-4 text-xl">Calculate</button>
+
+            <h1 class="inline text-lg ml-6 mr-6  ">Player Expenses $<span>5000</span></h1>
+
+            <h1 class="inline text-lg ml-6 ">Per Player</h1>
+            <input class="w-36 py-2 mb-4 mt-4" type="number">
+            <h1 class="inline text-lg ml-6">Per Player</h1>
+            <input class="w-36 py-2" type="number">
+
+            <button class=" btn-primary px-16 py-4 my-7 ml-3  text-xl">Calculate Total</button>
+
+            <h1 class="inline text-lg text-center ml-24  ">Total $<span>5000</span></h1>
+        </div>
+
+
+
+
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/mashrafemortazafb.jpg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Mashrafe Bin Mortaza</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/Mushfiqur-Rahim-2107221428_280x180.jpg" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Mushfiqur-Rahim</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+        <div class="border-4 bg-slate-400">
+            <img src="images/Taskin.png" alt="">
+            <h1 class="text-center my-4 text-white text-2xl">Taskin</h1>
+            <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+        </div>
+
+
+
+
+    </div>
 
 
     <script src="js/app.js"></script>
