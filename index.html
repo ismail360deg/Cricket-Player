@@ -28,7 +28,7 @@
             <img src="images/shakib.jpeg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Shakib</h1>
             <div>
-                <button id="select" class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button id="select" class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
@@ -38,7 +38,7 @@
             <img src="images/rubbel.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl pl-4">Rubbel</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
@@ -48,30 +48,35 @@
             <img src="images/sabbir_280x180.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Sabbir</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
 
+
+
         <!-- selected-V -->
         <div class="border-4 bg-slate-400">
+
             <p class="text-center my-4 text-white text-2xl">Selected - V</p>
-            <table>
-                <!-- head -->
-                <!-- <thead>
-                        <tr>
-                            <th>Player Num</th>
-                            <th>Player Name</th>
-                        </tr>
-                    </thead> -->
-                <tbody id="players-cart" class="table-list">
-                    <!-- <tr>
-                            <th>1</th>
-                            <td>Shakib</td>
-                        </tr> -->
-                </tbody>
-            </table>
+
+
+            <div id="selected-item">
+
+            </div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!-- player 4 -->
@@ -80,7 +85,7 @@
             <h1 class="text-center my-4 text-white text-2xl">Tamim-Iqbal</h1>
 
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
 
         </div>
@@ -92,7 +97,7 @@
             <img src="images/Mahmudullah_280x180.png" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mahmudullah-Riyad</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
@@ -102,7 +107,8 @@
             <img src="images/Mustafizur-Rahman_1_280x180.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mustafizur-Rahman</h1>
             <div>
-                <button id="clicked" class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button id="clicked" class="btn btn-primary px-24 ml-4 mb-4"
+                    onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
@@ -139,7 +145,7 @@
             <img src="images/mashrafemortazafb.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mashrafe Bin Mortaza</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
@@ -150,7 +156,7 @@
             <img src="images/Mushfiqur-Rahim-2107221428_280x180.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mushfiqur-Rahim</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
@@ -160,13 +166,13 @@
             <img src="images/Taskin.png" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Taskin</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="playerSelect(this)">SELECT</button>
             </div>
         </div>
 
     </div>
 
-
+    <script src="js/utilities.js"></script>
     <script src="js/app.js"></script>
 </body>
 

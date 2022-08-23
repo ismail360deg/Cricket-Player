@@ -1,28 +1,64 @@
-const cartArray = [];
+// const cartArray = [];
 
-function display(cartplayer) {
+// function display(cartplayer) {
 
-    console.log(cartplayer);
-    const tableBody = document.getElementById("players-cart");
-    tableBody.innerHTML = '';
+//     console.log(cartplayer);
+//     const tableBody = document.getElementById("players-cart");
+//     tableBody.innerHTML = '';
 
-    for (let i = 0; i < 5; i++) {
+//     for (let i = 0; i < 5; i++) {
 
-        // console.log(cartArray[i].playerName,);
-        const name = cartArray[i].playerName;
+//         // console.log(cartArray[i].playerName,);
+//         const name = cartArray[i].playerName;
 
-        const tr = document.createElement("tr");
+//         const tr = document.createElement("tr");
 
+//         tr.innerHTML = `
+//         <th class = "pl-20 text-white">${i + 1}. </th>
+//         <td class = text-white>${name}</td>
+//         `;
+
+//         tableBody.appendChild(tr);
+
+//     }
+
+// }
+
+
+
+
+const allPlayers = [];
+function allPlayer() {
+    const playerSelect = document.getElementById('selected-item');
+    playerSelect.innerText = '';
+
+    for (let i = 0; i < allPlayers.length; i++) {
+        const playerList = allPlayers[i];
+        const tr = document.createElement('tr');
         tr.innerHTML = `
-        <th class = "pl-20 text-white">${i + 1}. </th>
-        <td class = text-white>${name}</td>
-        `;
+        <th class = "pl-20 text-white">${i + 1}.</th>
+        <th class = "text-white">${playerList}</th>
+        `
 
-        tableBody.appendChild(tr);
+        playerSelect.appendChild(tr);
 
+        console.log(playerList);
     }
-
 }
+
+function playerSelect(players) {
+    const playersName = players.parentNode.parentNode.children[1].innerText;
+    allPlayers.push(playersName);
+    console.log(allPlayers);
+    allPlayer(allPlayers);
+}
+
+
+
+
+
+
+
 
 
 document.getElementById("clicked").addEventListener('click', function () {
