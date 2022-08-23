@@ -20,28 +20,30 @@
 
     </header>
 
-    <!--  -->
 
+    <!-- player 1 -->
     <div class="w-9/12 mx-auto grid grid-cols-4 gap-0 mb-8">
 
         <div class="border-4 bg-slate-400">
             <img src="images/shakib.jpeg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Shakib</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button id="select" class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
             </div>
         </div>
 
 
-
+        <!-- player 2 -->
         <div class="border-4 bg-slate-400">
             <img src="images/rubbel.jpg" alt="">
-            <h1 class="text-center my-4 text-white text-2xl">Rubbel</h1>
+            <h1 class="text-center my-4 text-white text-2xl pl-4">Rubbel</h1>
             <div>
                 <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
             </div>
         </div>
 
+
+        <!-- player 3 -->
         <div class="border-4 bg-slate-400">
             <img src="images/sabbir_280x180.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Sabbir</h1>
@@ -51,38 +53,28 @@
         </div>
 
 
-
-
+        <!-- selected-V -->
         <div class="border-4 bg-slate-400">
             <p class="text-center my-4 text-white text-2xl">Selected - V</p>
-
-
-            <div class="overflow-x-auto">
-                <table>
-                    <!-- head -->
-                    <!-- <thead>
+            <table>
+                <!-- head -->
+                <!-- <thead>
                         <tr>
-                            <th></th>
                             <th>Player Num</th>
                             <th>Player Name</th>
                         </tr>
                     </thead> -->
-                    <tbody id="players-cart">
-                        <!-- <tr>
+                <tbody id="players-cart" class="table-list">
+                    <!-- <tr>
                             <th>1</th>
                             <td>Shakib</td>
                         </tr> -->
-                    </tbody>
-                </table>
-            </div>
-
-
+                </tbody>
+            </table>
         </div>
 
 
-
-
-
+        <!-- player 4 -->
         <div class="border-4 bg-slate-400">
             <img src="images/Tamim.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Tamim-Iqbal</h1>
@@ -93,6 +85,9 @@
 
         </div>
 
+
+
+        <!-- player 5 -->
         <div class="border-4 bg-slate-400">
             <img src="images/Mahmudullah_280x180.png" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mahmudullah-Riyad</h1>
@@ -101,40 +96,45 @@
             </div>
         </div>
 
+
+        <!-- player 6 -->
         <div class="border-4 bg-slate-400">
             <img src="images/Mustafizur-Rahman_1_280x180.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mustafizur-Rahman</h1>
             <div>
-                <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
+                <button id="clicked" class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
             </div>
         </div>
 
 
-
+        <!-- Budject -->
         <div class="border-4 bg-slate-400 grid-rows-2 row-span-3 ">
             <h1 class="text-center my-4 text-white text-2xl">Budget</h1>
 
             <h1 class="inline text-lg ml-6">Per Player</h1>
-            <input class="w-36 py-2" type="number">
+            <input id="player-ammount" value="" class="w-36 py-2 px-12" type="number">
 
-            <button class=" btn-primary px-20 py-4 ml-4 my-4 text-xl">Calculate</button>
+            <button id="per-player-calculate-ammount"
+                class=" btn-primary px-20 py-4 ml-4 my-4 text-xl">Calculate</button>
 
-            <h1 class="inline text-lg ml-6 mr-6  ">Player Expenses $<span>5000</span></h1>
+            <h1 class="inline text-lg ml-6 mr-6  ">Player Expenses $<span id="per-player-total">00</span></h1>
 
-            <h1 class="inline text-lg ml-6 ">Per Player</h1>
-            <input class="w-36 py-2 mb-4 mt-4" type="number">
-            <h1 class="inline text-lg ml-6">Per Player</h1>
-            <input class="w-36 py-2" type="number">
+            <h1 class="inline text-lg ml-6 ">Manager</h1>
+            <input id="manager-ammount" class="w-36 py-2 my-4 ml-2" type="number">
 
-            <button class=" btn-primary px-16 py-4 my-7 ml-3  text-xl">Calculate Total</button>
+            <h1 class="inline text-lg ml-6">Coach</h1>
+            <input id="coach-ammount" class="w-36 py-2 ml-7" type="number">
 
-            <h1 class="inline text-lg text-center ml-24  ">Total $<span>5000</span></h1>
+            <button id="calculate-total-ammount" class=" btn-primary px-16 py-4 my-7 ml-3  text-xl">Calculate
+                Total</button>
+
+            <h1 class="inline text-lg text-center ml-24  ">Total $<span id="per-total-ammount">00</span></h1>
         </div>
 
 
 
 
-
+        <!-- player 7 -->
         <div class="border-4 bg-slate-400">
             <img src="images/mashrafemortazafb.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mashrafe Bin Mortaza</h1>
@@ -143,6 +143,9 @@
             </div>
         </div>
 
+
+
+        <!-- player 8 -->
         <div class="border-4 bg-slate-400">
             <img src="images/Mushfiqur-Rahim-2107221428_280x180.jpg" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Mushfiqur-Rahim</h1>
@@ -151,6 +154,8 @@
             </div>
         </div>
 
+
+        <!-- player 9 -->
         <div class="border-4 bg-slate-400">
             <img src="images/Taskin.png" alt="">
             <h1 class="text-center my-4 text-white text-2xl">Taskin</h1>
@@ -158,9 +163,6 @@
                 <button class="btn btn-primary px-24 ml-4 mb-4" onclick="addToCart(this)">SELECT</button>
             </div>
         </div>
-
-
-
 
     </div>
 
