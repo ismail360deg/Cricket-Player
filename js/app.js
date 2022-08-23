@@ -24,8 +24,6 @@ function display(cartplayer) {
 }
 
 
-
-
 function playerSelect(element) {
 
     if (cartArray.length >= 5) {
