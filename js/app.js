@@ -24,11 +24,14 @@ function display(cartplayer) {
 }
 
 
-document.getElementById("clicked").addEventListener('click', function () {
-    alert("You can clicked only 5 cart");
-})
+
 
 function playerSelect(element) {
+
+    if (cartArray.length >= 5) {
+        alert("You can clicked only 5 cart");
+        return;
+    }
 
     element.style.backgroundColor = "tomato"
     element.style.border = "none"
