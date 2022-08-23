@@ -1,71 +1,34 @@
-// const cartArray = [];
+const cartArray = [];
 
-// function display(cartplayer) {
+function display(cartplayer) {
 
-//     console.log(cartplayer);
-//     const tableBody = document.getElementById("players-cart");
-//     tableBody.innerHTML = '';
+    console.log(cartplayer);
+    const tableBody = document.getElementById("players-cart");
+    tableBody.innerHTML = '';
 
-//     for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
 
-//         // console.log(cartArray[i].playerName,);
-//         const name = cartArray[i].playerName;
+        const name = cartArray[i].playerName;
 
-//         const tr = document.createElement("tr");
+        const tr = document.createElement("tr");
 
-//         tr.innerHTML = `
-//         <th class = "pl-20 text-white">${i + 1}. </th>
-//         <td class = text-white>${name}</td>
-//         `;
-
-//         tableBody.appendChild(tr);
-
-//     }
-
-// }
-
-
-
-
-const cartAllPlayers = [];
-function allPlayer() {
-    const cartPlayerSelect = document.getElementById('total-selected-item');
-    cartPlayerSelect.innerText = '';
-
-    for (let i = 0; i < cartAllPlayers.length; i++) {
-        const cartPlayerList = cartAllPlayers[i];
-        const tr = document.createElement('tr');
         tr.innerHTML = `
-        <th class = "pl-20 text-white">${i + 1}.</th>
-        <th class = "text-white">${cartPlayerList}</th>
-        `
+        <th class = "pl-20 text-white">${i + 1}. </th>
+        <td class = text-white>${name}</td>
+        `;
 
-        cartPlayerSelect.appendChild(tr);
+        tableBody.appendChild(tr);
 
-        console.log(cartPlayerList);
     }
+
 }
-
-function playerSelect(players) {
-    const playersName = players.parentNode.parentNode.children[1].innerText;
-    cartAllPlayers.push(playersName);
-    console.log(cartAllPlayers);
-    allPlayer(cartAllPlayers);
-}
-
-
-
-
-
-
-
 
 
 document.getElementById("clicked").addEventListener('click', function () {
     alert("You can clicked only 5 cart");
 })
 
-function addToCart(element) {
+function playerSelect(element) {
 
     element.style.backgroundColor = "tomato"
     element.style.border = "none"
@@ -90,9 +53,7 @@ function addToCart(element) {
 
 document.getElementById("per-player-calculate-ammount").addEventListener('click', function () {
 
-
-    const selectedPlayers = cartAllPlayers.length
-
+    const selectedPlayers = cartArray.length
 
     const ammountField = document.getElementById('player-ammount');
     const newPerPlayerAmount = ammountField.value;
@@ -128,9 +89,6 @@ document.getElementById("calculate-total-ammount").addEventListener('click', fun
 
     const coachAmmountTotalElement = document.getElementById('per-total-ammount');
     coachAmmountTotalElement.innerText = fullTotalAmmount;
-
-    // console.log(fullTotalAmmount);
-
 
 })
 
