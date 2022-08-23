@@ -27,30 +27,30 @@
 
 
 
-const allPlayers = [];
+const cartAllPlayers = [];
 function allPlayer() {
-    const playerSelect = document.getElementById('selected-item');
-    playerSelect.innerText = '';
+    const cartPlayerSelect = document.getElementById('total-selected-item');
+    cartPlayerSelect.innerText = '';
 
-    for (let i = 0; i < allPlayers.length; i++) {
-        const playerList = allPlayers[i];
+    for (let i = 0; i < cartAllPlayers.length; i++) {
+        const cartPlayerList = cartAllPlayers[i];
         const tr = document.createElement('tr');
         tr.innerHTML = `
         <th class = "pl-20 text-white">${i + 1}.</th>
-        <th class = "text-white">${playerList}</th>
+        <th class = "text-white">${cartPlayerList}</th>
         `
 
-        playerSelect.appendChild(tr);
+        cartPlayerSelect.appendChild(tr);
 
-        console.log(playerList);
+        console.log(cartPlayerList);
     }
 }
 
 function playerSelect(players) {
     const playersName = players.parentNode.parentNode.children[1].innerText;
-    allPlayers.push(playersName);
-    console.log(allPlayers);
-    allPlayer(allPlayers);
+    cartAllPlayers.push(playersName);
+    console.log(cartAllPlayers);
+    allPlayer(cartAllPlayers);
 }
 
 
@@ -90,14 +90,20 @@ function addToCart(element) {
 
 document.getElementById("per-player-calculate-ammount").addEventListener('click', function () {
 
+
+    const selectedPlayers = cartAllPlayers.length
+
+
     const ammountField = document.getElementById('player-ammount');
     const newPerPlayerAmount = ammountField.value;
 
     const PlayerAmount = parseFloat(newPerPlayerAmount);
 
+    const currentMoney = selectedPlayers * PlayerAmount;
+
     const ammountTotalElement = document.getElementById("per-player-total");
     const ammountTotal = ammountTotalElement.innerText;
-    ammountTotalElement.innerText = newPerPlayerAmount;
+    ammountTotalElement.innerText = currentMoney;
 
 })
 
