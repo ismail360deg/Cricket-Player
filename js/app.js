@@ -1,16 +1,12 @@
 const cartArray = [];
 
-
 function display(cartplayer) {
 
     console.log(cartplayer);
     const tableBody = document.getElementById("players-cart");
     tableBody.innerHTML = '';
 
-
-
     for (let i = 0; i < 5; i++) {
-
 
         // console.log(cartArray[i].playerName,);
         const name = cartArray[i].playerName;
@@ -24,9 +20,7 @@ function display(cartplayer) {
 
         tableBody.appendChild(tr);
 
-
     }
-
 
 }
 
@@ -34,11 +28,6 @@ function display(cartplayer) {
 document.getElementById("clicked").addEventListener('click', function () {
     alert("You can clicked only 5 cart");
 })
-
-
-
-
-
 
 function addToCart(element) {
 
@@ -48,10 +37,7 @@ function addToCart(element) {
     element.innerText = 'SELECTED'
     element.setAttribute('disabled', true)
 
-
-
     const playerName = element.parentNode.parentNode.children[1].innerText;
-
 
     const playerObj = {
         playerName: playerName,
